@@ -13,4 +13,56 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: beige;
+}
+
+header {
+    color: darkslategray;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: darkslategray;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 20px 5px lightskyblue;
+}
+
+.btnbox {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.btn {
+    background-color: beige;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: darkslategray;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: black;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startbtn .nextbtn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.hide {
+    display: none;
 }
