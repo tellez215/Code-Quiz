@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: deepskyblue;
+}
+
+.start {
+    background-color: aquamarine;
+    padding: 10px;
+    color: brown;
+}
