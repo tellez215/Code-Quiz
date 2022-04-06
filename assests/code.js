@@ -20,6 +20,7 @@ function startGame() {
     randomQuestions = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
     questionConEl.classList.remove('hide')
+    scoreTracker.classList.remove('hide');
     setNextQuestion()
     scoreUpEl.textContent = 0;
 }
@@ -59,10 +60,10 @@ function selectAnswer(e) {
     Array.from(answerBtnEl.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (randomQuestions.lenght > currentQuestion + 1) {
+    if (randomQuestions.lenght > currentQuestion + 0) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'restart'
+        startButton.innerText = 'next'
         startButton.classList.remove('hide')
     }
 }
@@ -83,9 +84,40 @@ function clearStatusClass(element) {
 
 
 const questions = [{
-    question: 'What is the most used programming language?',
-    answers: [
-        { text: 'JavaScript', correct: true },
-        { text: 'HTML', correct: false }
-    ]
-}]
+        question: 'What is the most used programming language?',
+        answers: [
+            { text: 'JavaScript', correct: true },
+            { text: 'HTML', correct: false },
+            { text: 'CSS', correct: false },
+            { text: 'Java', correct: false }
+        ]
+    },
+    {
+        question: 'What is NaN in JavaScript?',
+        answers: [
+            { text: 'No-And-No', correct: false },
+            { text: 'Not-A-Number', correct: true },
+            { text: 'Next-And-Next', correct: false },
+            { text: 'Nothing', correct: false }
+
+        ]
+    },
+    {
+        question: 'Is JavaScript Hard?',
+        answers: [
+            { text: 'YES', correct: true },
+            { text: 'pssh no?', correct: false },
+            { text: 'Kinda', correct: false },
+            { text: 'What is JavaScript?', correct: false }
+        ]
+    }
+];
+
+function processResults(iscorrect) {
+    if (!correct) {
+        return;
+    }
+    const scoreUp = parseInt(scoreUpEl.textContent, 10) || 0;
+
+    scoreUpEl.textContent = scoreUp + 100;
+}
