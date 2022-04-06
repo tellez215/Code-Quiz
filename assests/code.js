@@ -5,6 +5,19 @@ const questionEl = document.getElementById('questions')
 const answerBtnEl = document.getElementById('answerbtn')
 const scoreTracker = document.getElementById('scoreTracker')
 const scoreUpEl = document.getElementById('scoreUp')
+var sec = 120;
+var time = setInterval(myTimer, 2 * 1000);
+let scoreUp = 0;
+
+
+function myTimer() {
+    document.getElementById('timer').innerHTML = sec + 'sec left';
+    sec--;
+    if (sec < 0) {
+        clearInterval(time);
+        alert('time ran out!! :(')
+    }
+}
 
 let randomQuestions, currentQuestion
 
@@ -63,7 +76,7 @@ function selectAnswer(e) {
     if (randomQuestions.lenght > currentQuestion + 0) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'next'
+        startButton.innerText = 'Next'
         startButton.classList.remove('hide')
     }
 }
@@ -83,13 +96,16 @@ function clearStatusClass(element) {
 }
 
 
+
+
 const questions = [{
         question: 'What is the most used programming language?',
         answers: [
             { text: 'JavaScript', correct: true },
-            { text: 'HTML', correct: false },
-            { text: 'CSS', correct: false },
-            { text: 'Java', correct: false }
+            { text: 'HTML', /*correct: false*/ },
+            { text: 'CSS', /*correct: false*/ },
+            { text: 'Java', /*correct: false*/ }
+
         ]
     },
     {
@@ -113,11 +129,12 @@ const questions = [{
     }
 ];
 
-function processResults(iscorrect) {
-    if (!correct) {
-        return;
-    }
-    const scoreUp = parseInt(scoreUpEl.textContent, 10) || 0;
+// function processResults(correctAnswer) {
+//     if (selectAnswer >= questions.correct(true)) {
+//         return;
+//         scoreUp++
+//     }
+//     const scoreUp = parseInt(scoreUpEl.textContent, 10) || 0;
 
-    scoreUpEl.textContent = scoreUp + 100;
-}
+//     scoreUpEl.textContent = scoreUp + 100;
+// }
