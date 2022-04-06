@@ -48,7 +48,7 @@ header {
 }
 
 .btn:hover {
-    border-color: black;
+    border-color: lightskyblue;
 }
 
 .controls {
@@ -68,7 +68,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: blue;
+    color: white;
 }
 
 .hide {
