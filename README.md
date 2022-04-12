@@ -1,5 +1,5 @@
 # <em> Code-Quiz <em>
-#
+# https://tellez215.github.io/Code-Quiz/
 ## Description
 This is a project called 'Code-Quiz' and I created this quiz users about the topic 'JavaScript' as it's the most used programming language out there! This project is unfortunately not completed but that comes with more pratice and studying to do on my part! It was a very challenging project but I learned a lot about JavaScript doing so. I'm actually happy with the results that have been made and I will be coming back to finish this project as I progress in leanrning more about JavaScript.
 
